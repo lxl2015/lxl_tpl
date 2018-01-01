@@ -1,0 +1,4 @@
+PROJECT(threadpool)
+INCLUDE_DIRECTORIES(include)
+ADD_DEFINITIONS("-g")
+ADD_SUBDIRECTORY(src bin)
