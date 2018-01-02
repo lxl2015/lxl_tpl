@@ -4,8 +4,8 @@
 
 void usage(char *prog)
 {
-  fprintf(stdout, "Usage: %s logfile PID\n", prog);
-  fprintf(stdout, "\t%s creates logfile-%%06d.log file. %%06d is given PID.\n", prog);
+  fprintf(stdout, "Usage: %s logfile Thread ID\n", prog);
+  fprintf(stdout, "\t%s creates logfile-%%15d.log file. %%15d is given Thread ID.\n", prog);
   return;
 }
 
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
   char out_file[128];
 
   if (argc < 3) {
-    fprintf(stderr, "is not given file name or PID\n");
+    fprintf(stderr, "is not given file name or Thread ID\n");
     usage(argv[0]);
     return 1;
   }
