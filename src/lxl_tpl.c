@@ -138,7 +138,7 @@ static int get_tpl_status(lxl_tpl_st *tpl)
 
     busy_num = tpl->threads_cur - tpl->thread_queue_list->count;
 
-    if(busy_num / (tpl->threads_cur) < BUSY_THRESHOLD)
+    if(busy_num / (tpl->threads_cur) >  BUSY_THRESHOLD)
         ret = 0; // idle status
     else
         ret =  1;// busy or normal status
